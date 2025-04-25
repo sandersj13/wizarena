@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    
     public float jumpForce = 10f;
-    public HealthBar healthBar;
+    
 
     private float moveInput;
     public float moveSpeed = 5f;
@@ -31,11 +30,8 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         rb = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-        
     }
 
     // Update is called once per frame
@@ -67,11 +63,7 @@ public class CharacterMovement : MonoBehaviour
 
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            TakeDamage(20);
-
-        }
+        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -79,12 +71,7 @@ public class CharacterMovement : MonoBehaviour
         }
     }
     
-        void TakeDamage(int Damage)
-        {
-            currentHealth -= Damage;
-
-            healthBar.SetHealth(currentHealth);
-        }
+       
     
 
     void OnTriggerCollision2D(Collider2D otherObject)
