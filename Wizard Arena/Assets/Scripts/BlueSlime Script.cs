@@ -5,24 +5,34 @@ using UnityEngine;
 public class BlueSlimeScript : MonoBehaviour
 {
     public float moveSpeed = 3f;
+    public float jumpForce = 7f;
     public float attackRange = 1.5f;
     public float attackCooldown = 2f;
     public int damage = 10;
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
+
 
     private Transform player;
     private float lastAttackTime;
+    private Rigidbody2D rb;
+    private bool isGrounded;
 
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (player == null) return;
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         float distance = Vector2.Distance(transform.position, player.position);
 
@@ -33,6 +43,11 @@ public class BlueSlimeScript : MonoBehaviour
         else
         {
             MoveTowardPlayer();
+
+            if (player.position.y > transform.position.y + 1f && isGrounded)
+            {
+                Jump();
+            }
         }
             
     }
@@ -50,5 +65,9 @@ public class BlueSlimeScript : MonoBehaviour
 
             lastAttackTime = Time.time;
         }
+    }
+    void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 }

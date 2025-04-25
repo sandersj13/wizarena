@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5146183008096531882}
   m_Layer: 0
   m_Name: Slime_0
-  m_TagString: charge
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,10 +148,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db24844f7d824882821ad945c316c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  attackRange: 3
+  moveSpeed: 5
+  jumpForce: 55
+  attackRange: 2
   attackCooldown: 2
   damage: 10
+  groundCheck: {fileID: 5520895976693339721, guid: d65e5bcb4ecec42458dffcb3736cccec, type: 3}
+  groundCheckRadius: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &5146183008096531882
 BoxCollider2D:
   m_ObjectHideFlags: 0

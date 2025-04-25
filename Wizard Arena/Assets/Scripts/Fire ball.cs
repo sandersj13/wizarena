@@ -24,6 +24,11 @@ public class Fireball : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
+        if (collision.gameObject.CompareTag("Slime"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
     
 }
