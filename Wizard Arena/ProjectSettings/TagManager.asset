@@ -9,6 +9,7 @@ TagManager:
   - Target Dummy
   - charge
   - Slime
+  - Enemy
   layers:
   - Default
   - TransparentFX
