@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2365955695540722377}
   - component: {fileID: 1043441385380935438}
   - component: {fileID: 9132408842077081175}
+  - component: {fileID: 9173431476652785628}
   m_Layer: 0
   m_Name: Wizard (1)
   m_TagString: Player
@@ -233,6 +234,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &9173431476652785628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5284683937226536121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96d8160a7445456ebff1c661d5462e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 9024356343520554818}
+  shootSound: {fileID: 0}
 --- !u!1 &5501529369173513716
 GameObject:
   m_ObjectHideFlags: 0
