@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : MonoBehaviour
+public class FreezeBall : MonoBehaviour
 {
+    public float freezeDuration = 3f;
     public float speed = 10f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 3f);
+        
     }
 
     // Update is called once per frame
@@ -17,13 +18,21 @@ public class Fireball : MonoBehaviour
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnCollisionEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Target Dummy"))
+        if (collision.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject);
+            EnemyFreeze enemy = collision.GetComponent<EnemyFreeze>();
+
+            if (enemy != null)
+            {
+                enemy.Freeze(freezeDuration);
+            }
+
             Destroy(gameObject);
         }
+        
+        
     }
-    
 }
