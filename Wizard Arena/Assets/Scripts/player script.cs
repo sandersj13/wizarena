@@ -30,12 +30,17 @@ public class CharacterMovement : MonoBehaviour
     public Transform firePoint;
     public GameObject Freezeballprefab;
 
+    public int maxHealth = 100;
+    public int currentHealth;
+    public GameObject deathEffect;
+
 
     // Start is called before the first frame update
     void Start()
     {
 
         rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -149,6 +154,30 @@ public class CharacterMovement : MonoBehaviour
             scale.x *= -1;
             freezeBall.transform.localScale = scale;
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0 )
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        if (deathEffect !=null)
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+        }
+        gameObject.SetActive(false);
+
+        if (controller != null)
+        {
+            controller.GameOver();
+        }
+
     }
 
 
