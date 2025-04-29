@@ -19,7 +19,7 @@ public class FreezeBall : MonoBehaviour
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter2D(Collider2D collision)
+    private void CollisionEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
