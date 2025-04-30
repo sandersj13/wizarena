@@ -70,4 +70,17 @@ public class BlueSlimeScript : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
+     void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            CharacterMovement player = collision.gameObject.GetComponent<CharacterMovement>();
+
+            if (player != null)
+                {
+                player.TakeDamage(damage);
+            }
+
+        }
+    }
 }

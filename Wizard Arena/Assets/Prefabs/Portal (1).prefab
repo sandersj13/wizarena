@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 6865090899758577617}
   - component: {fileID: 3117796579638883273}
   - component: {fileID: 7467701995569817286}
+  - component: {fileID: 8137561264572836242}
   m_Layer: 0
-  m_Name: Portal
+  m_Name: Portal (1)
   m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 405536942477835713}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.2599792, y: -5.8670187, z: 0}
+  m_LocalPosition: {x: 6.6, y: 5.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -165,3 +166,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1608791, y: 1.7904162}
   m_EdgeRadius: 0
+--- !u!114 &8137561264572836242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405536942477835713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52167dc97cd444a14bd1a924727cf6b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalSound: {fileID: 8300000, guid: d8c46ed63aeaa4acbb3ceef01f598079, type: 3}

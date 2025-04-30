@@ -21,7 +21,7 @@ public class FreezeBall : MonoBehaviour
 
     private void CollisionEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             EnemyFreeze enemy = collision.GetComponent<EnemyFreeze>();
 
@@ -30,7 +30,7 @@ public class FreezeBall : MonoBehaviour
                 enemy.Freeze(freezeDuration);
             }
 
-            Destroy(gameObject);
+          
         }
         
         
