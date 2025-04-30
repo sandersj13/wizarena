@@ -34,6 +34,10 @@ public class CharacterMovement : MonoBehaviour
     public int currentHealth;
     public GameObject deathEffect;
 
+    private Animator animator;
+
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +45,7 @@ public class CharacterMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+       
     }
 
     // Update is called once per frame
@@ -167,20 +172,34 @@ public class CharacterMovement : MonoBehaviour
 
     void Die()
     {
-        if (deathEffect !=null)
+        if ( animator != null)
+        {
+            animator.SetTrigger("Die");
+        }
+
+        if (deathEffect != null)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
         }
+        StartCoroutine(HandleDeath());
+    }
+
+    IEnumerator HandleDeath()
+    {
+        yield return new WaitForSeconds(1f);
+
         gameObject.SetActive(false);
 
         if (controller != null)
         {
             controller.GameOver();
         }
-
     }
 
+  
+    
 
-        
+
+
 }
 
