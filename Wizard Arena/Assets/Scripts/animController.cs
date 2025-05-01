@@ -19,5 +19,6 @@ public class animationController : MonoBehaviour
             animController.SetInteger("control", 1);
 
         }
+        animController.SetTrigger("Die");
     }
 }
