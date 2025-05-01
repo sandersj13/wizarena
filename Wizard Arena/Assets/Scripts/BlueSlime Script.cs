@@ -13,11 +13,16 @@ public class BlueSlimeScript : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
+    public Transform edgeCheck;
+    public float edgeCheckDistance = 0.1f;
+
 
     private Transform player;
     private float lastAttackTime;
     private Rigidbody2D rb;
     private bool isGrounded;
+
+    public float detectionRange = 4f;
 
 
     // Start is called before the first frame update
@@ -36,26 +41,42 @@ public class BlueSlimeScript : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        if (distance <= attackRange)
+        if (distance <= detectionRange)
         {
-            Attack();
+            if (distance <= attackRange)
+            {
+                Attack();
+            }
+            else
+            {
+                MoveTowardPlayer();
+
+                if (player.position.y > transform.position.y + 1f && isGrounded)
+                {
+                    Jump();
+                }
+            }
         }
         else
         {
-            MoveTowardPlayer();
-
-            if (player.position.y > transform.position.y + 1f && isGrounded)
-            {
-                Jump();
-            }
+            rb.velocity = new Vector2(0, rb.velocity.y);
         }
             
     }
     void MoveTowardPlayer()
     {
-
         Vector2 direction = (player.position - transform.position).normalized;
-        transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
+        bool isGroundAhead = Physics2D.Raycast(edgeCheck.position, Vector2.down, edgeCheckDistance, groundLayer);
+
+        if (isGroundAhead)
+        {
+            rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+        
     }
     void Attack()
     {
@@ -71,7 +92,7 @@ public class BlueSlimeScript : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
      void OnCollisionEnter2D(Collision2D collision)
-    {
+    { 
         if (collision.gameObject.CompareTag("Player"))
         {
             CharacterMovement player = collision.gameObject.GetComponent<CharacterMovement>();
@@ -82,5 +103,11 @@ public class BlueSlimeScript : MonoBehaviour
             }
 
         }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
 }
