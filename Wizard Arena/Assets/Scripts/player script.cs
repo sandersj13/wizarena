@@ -27,7 +27,7 @@ public class CharacterMovement : MonoBehaviour
 
     public int maxHealth = 10;
     public int health;
-    public GameObject deathEffect;
+   
 
     private Animator animator;
 
@@ -163,12 +163,6 @@ public class CharacterMovement : MonoBehaviour
         {
             animator.SetTrigger("Die");
         }
-
-        if (deathEffect != null)
-        {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-        }
-        StartCoroutine(HandleDeath());
     }
 
     IEnumerator HandleDeath()
