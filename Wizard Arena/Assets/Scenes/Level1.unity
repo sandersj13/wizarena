@@ -3370,7 +3370,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c5057d9df1e5b4154adcd8ae4777142d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.802
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3709,6 +3709,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3680379619919700784, guid: 0c7096993a0234f4484980b26c9f9827, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 405536942477835713, guid: 0c7096993a0234f4484980b26c9f9827, type: 3}
       propertyPath: m_Name
       value: Portal (1)

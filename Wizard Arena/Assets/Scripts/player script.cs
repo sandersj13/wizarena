@@ -29,15 +29,16 @@ public class CharacterMovement : MonoBehaviour
     public int health;
    
 
-    private readonly Animator animator;
+    private Animator animator;
 
 
     // Start is called before the first frame update
-    void Start(Animator Animator)
+    void Start()
     {
 
         rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
+        animator = GetComponent<Animator>();
        
     }
 
@@ -110,7 +111,7 @@ public class CharacterMovement : MonoBehaviour
        
     
 
-    void OnTriggerCollision2D(Collider2D otherObject)
+    void OnTriggerEnter2D(Collider2D otherObject)
     {
         if (otherObject.gameObject.CompareTag("charge"))
         {
@@ -129,12 +130,6 @@ public class CharacterMovement : MonoBehaviour
         float direction = isFacingRight ? 1f : -1f;
         rb.velocity = new Vector2(FireballSpeed * direction, 0);
 
-        if (!isFacingRight)
-        {
-            Vector3 scale = Fireball.transform.localScale;
-            scale.x *= -1;
-            Fireball.transform.localScale = scale;
-        }
     }
 
     void ShootFreezeBall()

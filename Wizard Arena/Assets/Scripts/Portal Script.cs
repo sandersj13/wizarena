@@ -15,6 +15,7 @@ public class PortalTeleport : MonoBehaviour
             int CSnum = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(CSnum + 1);
 
+
         }
 
 
