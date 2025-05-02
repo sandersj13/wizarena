@@ -3,7 +3,8 @@ guid: 52167dc97cd444a14bd1a924727cf6b0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - portalSound: {fileID: 8300000, guid: d8c46ed63aeaa4acbb3ceef01f598079, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
