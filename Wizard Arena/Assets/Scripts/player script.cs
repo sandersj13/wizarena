@@ -1,13 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
     
     public float jumpForce = 10f;
-    
-
     private float moveInput;
     public float moveSpeed = 5f;
 
@@ -22,11 +19,9 @@ public class CharacterMovement : MonoBehaviour
 
     public float FireballSpeed = 20.0f;
     public GameObject FireballPrefab;
-
     public GameController controller;
 
     private bool isFacingRight = true;
-
     public Transform firePoint;
     public GameObject Freezeballprefab;
 
@@ -34,13 +29,11 @@ public class CharacterMovement : MonoBehaviour
     public int health;
     public GameObject deathEffect;
 
-    private Animator animator;
-
-    
+    private readonly Animator animator;
 
 
     // Start is called before the first frame update
-    void Start()
+    void Start(Animator Animator)
     {
 
         rb = GetComponent<Rigidbody2D>();
@@ -130,8 +123,7 @@ public class CharacterMovement : MonoBehaviour
 
     void fireShot()
     {
-        GameObject Fireball = (GameObject)Instantiate(FireballPrefab, firePoint.position, Quaternion.identity);
-
+        GameObject Fireball = Instantiate(FireballPrefab, firePoint.position, Quaternion.identity);
         Rigidbody2D rb = Fireball.GetComponent<Rigidbody2D>();
 
         float direction = isFacingRight ? 1f : -1f;
