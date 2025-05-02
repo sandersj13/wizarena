@@ -197,6 +197,9 @@ MonoBehaviour:
   controller: {fileID: 0}
   firePoint: {fileID: 761875283620618173}
   Freezeballprefab: {fileID: 6361791615500023144, guid: a3147ac38d1304e38b327e55ebaa6d05, type: 3}
+  maxHealth: 100
+  currentHealth: 0
+  deathEffect: {fileID: 0}
 --- !u!61 &2365955695540722377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -424,7 +427,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 488d66bd6e5484727bd0f875b1fb9b8f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
