@@ -197,8 +197,8 @@ MonoBehaviour:
   controller: {fileID: 0}
   firePoint: {fileID: 761875283620618173}
   Freezeballprefab: {fileID: 6361791615500023144, guid: a3147ac38d1304e38b327e55ebaa6d05, type: 3}
-  maxHealth: 100
-  currentHealth: 0
+  maxHealth: 50
+  health: 0
   deathEffect: {fileID: 0}
 --- !u!61 &2365955695540722377
 BoxCollider2D:

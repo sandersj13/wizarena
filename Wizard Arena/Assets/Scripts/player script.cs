@@ -25,8 +25,8 @@ public class CharacterMovement : MonoBehaviour
     public Transform firePoint;
     public GameObject Freezeballprefab;
 
-    public int maxHealth = 100;
-    public int currentHealth;
+    public int maxHealth = 10;
+    public int health;
     public GameObject deathEffect;
 
     private readonly Animator animator;
@@ -37,14 +37,8 @@ public class CharacterMovement : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
-        Animator = GetComponent<Animator>();
-
-        if (FireballPrefab == null || Freezeballprefab == null)
-        {
-            Debug.LogError("FireballPrefab or Freezeballprefab is not assigned in the Inspector.");
-        }
-
+        health = maxHealth;
+       
     }
 
     // Update is called once per frame
@@ -159,10 +153,10 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int amount)
     {
-        currentHealth -= damage;
-        if (currentHealth <= 0 )
+        health -= amount;
+        if (health <= 0 )
         {
             Die();
         }

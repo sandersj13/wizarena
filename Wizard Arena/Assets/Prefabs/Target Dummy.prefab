@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 889190644560462596}
   - component: {fileID: 1018373446980475815}
   - component: {fileID: 7324823618385977014}
+  - component: {fileID: -2797469853030058219}
   m_Layer: 0
   m_Name: Target Dummy
   m_TagString: Enemy
@@ -172,3 +173,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+--- !u!114 &-2797469853030058219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4367878755219271028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83acf1a527794d6fbdf1a26118915ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
+  damage: 2

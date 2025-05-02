@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    
-     public void GameOver()
+
+    public GameObject gameOverUI;
+
+    public void GameOver()
     {
-        Debug.Log("GameOver!");
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(true);
+        }
+
+        Time.timeScale = 0f;
     }
+    
+     
 }
