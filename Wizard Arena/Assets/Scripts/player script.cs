@@ -27,6 +27,7 @@ public class CharacterMovement : MonoBehaviour
 
     public int maxHealth = 10;
     public int health;
+    public bool gameOver;
    
 
     private Animator animator;
@@ -65,80 +66,64 @@ public class CharacterMovement : MonoBehaviour
         }
 
         // Jump input
-        if (Input.GetKeyDown(KeyCode.UpArrow) && jumpCount > 0)
+        if (gameOver != true)
         {
+            if (Input.GetKeyDown(KeyCode.UpArrow) && jumpCount > 0)
+            {
 
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            jumpCount--;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                jumpCount--;
+            }
+        }
+        if (gameOver != true)
+        {
+            moveInput = Input.GetAxisRaw("Horizontal");
         }
 
-
-        moveInput = Input.GetAxisRaw("Horizontal");
-
-        if (!isDashing)
+        if (gameOver != true)
         {
-            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+            if (Input.GetKeyDown(KeyCode.Space))
+
+            {
+                fireShot();
+
+            }
         }
+        if (gameOver != true)
+            if (moveInput > 0 && !isFacingRight)
 
-        
+            {
+                Flip();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+            }
+        if (gameOver != true)
         {
-            fireShot();
-        }
+            if (moveInput < 0 && isFacingRight)
 
-        if (moveInput > 0 && !isFacingRight)
-        {
-            Flip();
-        }
-        else if (moveInput < 0 && isFacingRight)
-        {
-            Flip();
-        }
+            {
 
+                Flip();
+
+            }
+        }
         if (!isFacingRight)
         {
             Vector3 scale = FireballPrefab.transform.localScale;
             scale.x *= -1;
             FireballPrefab.transform.localScale = scale;
         }
-
-        if (Input.GetKeyDown(KeyCode.F))
+        if (gameOver != true)
         {
-            ShootFreezeBall();
-        }
+            if (Input.GetKeyDown(KeyCode.F))
 
-        if (Input.GetKeyDown(KeyCode.D)&& canDash && moveInput != 0)
-        {
-            StartCoroutine(Dash());
-        }
-    }
+            {
+                ShootFreezeBall();
 
-    IEnumerator Dash()
-    {
-        canDash = false;
-        isDashing = true;
-
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-
-        float dashDirection = isFacingRight ? 1f : -1f;
-        rb.velocity = new Vector2(moveInput * dashForce, 0f);
-
-        yield return new WaitForSeconds(dashDuration);
-
-        rb.gravityScale = originalGravity;
-        isDashing = false;
-
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
-
-        TrailRenderer trail = GetComponent<TrailRenderer>();
-        if (trail != null)
-        {
-            trail.emitting = true;
+            }
         }
     }
+
+    
     void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -194,33 +179,16 @@ public class CharacterMovement : MonoBehaviour
         if (health <= 0 )
         {
             Die();
+            gameOver = true;
         }
     }
 
     void Die()
     {
-        if ( animator != null)
+        if (gameOver == true)
         {
             animator.SetTrigger("Die");
         }
     }
-
-    IEnumerator HandleDeath()
-    {
-        yield return new WaitForSeconds(1f);
-
-        gameObject.SetActive(false);
-
-        if (controller != null)
-        {
-            controller.GameOver();
-        }
-    }
-
-  
-    
-
-
-
 }
 

@@ -265,24 +265,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2157416160042022059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268240079870940be8dcaf9b99bc4de4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4853806f8aab5468da63ea7ab995e095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
-  moveSpeed: 5
-  maxJumps: 2
-  groundCheck: {fileID: 0}
-  checkRadius: 0.1
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  FireballSpeed: 20
-  FireballPrefab: {fileID: 0}
-  controller: {fileID: 0}
-  firePoint: {fileID: 0}
-  Freezeballprefab: {fileID: 0}
-  maxHealth: 10
-  health: 0
-  dashForce: 15
-  dashDuration: 0.2
-  dashCooldown: 1
+  damage: 1

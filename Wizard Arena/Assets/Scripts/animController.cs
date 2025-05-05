@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class animationController : MonoBehaviour
 {
+    public CharacterMovement health;
+   
     Animator animController;
     // Start is called before the first frame update
     void Start()
     {
         animController = GetComponent<Animator>();
+       
     }
 
     // Update is called once per frame
@@ -16,9 +19,19 @@ public class animationController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            animController.SetInteger("control", 1);
+            animController.SetInteger("Reg", 1);
 
         }
-        animController.SetTrigger("Die");
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            animController.SetInteger("Reg", 2);
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            animController.SetInteger("Reg", 3);
+        }
+
     }
 }
