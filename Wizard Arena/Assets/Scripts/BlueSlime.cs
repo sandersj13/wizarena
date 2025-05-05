@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlueSlimeScript : MonoBehaviour
+public class BlueSlime : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public float jumpForce = 7f;
@@ -13,7 +13,7 @@ public class BlueSlimeScript : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
-    public int maxHealth = 3;
+    public int maxHealth = 15;
     private int currentHealth;
 
 
@@ -63,7 +63,7 @@ public class BlueSlimeScript : MonoBehaviour
     }
     void MoveTowardPlayer()
     {
-        Vector2 direction = (player.position - transform.position).normalized;
+        Vector2 direction = (player.position - transform.position).normalized;  
         transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
 
     }
