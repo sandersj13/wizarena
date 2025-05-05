@@ -29,7 +29,7 @@ public class Fireball : MonoBehaviour
         }
 
 
-        if (other.CompareTag("Enemy"))\
+        if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
         }
