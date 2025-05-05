@@ -69,7 +69,10 @@ public class CharacterMovement : MonoBehaviour
 
         moveInput = Input.GetAxisRaw("Horizontal");
 
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        if (!isDashing)
+        {
+            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        }
 
         
 
@@ -97,6 +100,37 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             ShootFreezeBall();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D)&& canDash && moveInput != 0)
+        {
+            StartCoroutine(Dash());
+        }
+    }
+
+    IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+
+        float dashDirection = isFacingRight ? 1f : -1f;
+        rb.velocity = new Vector2(moveInput * dashForce, 0f);
+
+        yield return new WaitForSeconds(dashDuration);
+
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
+
+        TrailRenderer trail = GetComponent<TrailRenderer>();
+        if (trail != null)
+        {
+            trail.emitting = true;
         }
     }
     void Flip()
