@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class FreezeBall : MonoBehaviour
 {
-    public float freezeDuration = 3f;
+    
     public float speed = 10f;
+    public int damage = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -19,17 +20,13 @@ public class FreezeBall : MonoBehaviour
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
-    private void CollisionEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy"))
         {
-            EnemyFreeze enemy = collision.GetComponent<EnemyFreeze>();
-
-            if (enemy != null)
-            {
-                enemy.Freeze(freezeDuration);
-            }
-
+            
+            Destroy(other.gameObject);
+            Destroy(gameObject); 
           
         }
         

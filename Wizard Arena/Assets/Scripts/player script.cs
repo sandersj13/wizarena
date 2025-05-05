@@ -147,21 +147,6 @@ public class CharacterMovement : MonoBehaviour
         transform.localScale = scale;
     }
 
-    
-       
-    
-
-    void OnTriggerEnter2D(Collider2D otherObject)
-    {
-        if (otherObject.gameObject.CompareTag("charge"))
-        {
-            Destroy(otherObject.gameObject);
-        }
-        
-
-        
-    }
-
     void fireShot()
     {
         GameObject Fireball = Instantiate(FireballPrefab, firePoint.position, Quaternion.identity);
@@ -216,10 +201,6 @@ public class CharacterMovement : MonoBehaviour
             controller.GameOver();
         }
     }
-
-  
-    
-
 
 
 }
