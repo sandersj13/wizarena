@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8938cf65fd5c647aab741ac745d1c76d
+guid: 03777bd8e75f147bb8e1dfc121dcdf1d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rock_0
+      name: Zombie_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 144
-        width: 144
-        height: 144
+        y: 288
+        width: 288
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ab4411445f0c4bdf9be4cf9d6605705
-      internalID: 1967762081
+      spriteID: 7fcfb7007ba8a491bb0ce1bd766dd0b2
+      internalID: 1768788780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rock_1
+      name: Zombie_1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 144
-        width: 144
-        height: 144
+        x: 288
+        y: 288
+        width: 288
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f742b4425938943b5a409a70f1bd6486
-      internalID: -604526704
+      spriteID: 1715130c63e834d5cb3706f7e057b991
+      internalID: -2019837799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rock_2
+      name: Zombie_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 144
-        height: 144
+        width: 288
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88789292c4f864402aadb693f182fe9a
-      internalID: 106356577
+      spriteID: f63b23eef52f945efb7fdb40030eec79
+      internalID: 893737703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013e8f342a371441885af9b82d332326
+      internalID: 512551048
       vertices: []
       indices: 
       edges: []
@@ -170,9 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rock_0: 1967762081
-      rock_1: -604526704
-      rock_2: 106356577
+      Zombie_0: 1768788780
+      Zombie_1: -2019837799
+      Zombie_2: 893737703
+      Zombie_3: 512551048
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

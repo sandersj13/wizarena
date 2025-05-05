@@ -1,13 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
     
     public float jumpForce = 10f;
-    
-
     private float moveInput;
     public float moveSpeed = 5f;
 
@@ -22,27 +19,17 @@ public class CharacterMovement : MonoBehaviour
 
     public float FireballSpeed = 20.0f;
     public GameObject FireballPrefab;
-
     public GameController controller;
 
     private bool isFacingRight = true;
-
     public Transform firePoint;
     public GameObject Freezeballprefab;
 
     public int maxHealth = 10;
     public int health;
-    public GameObject deathEffect;
+   
 
     private Animator animator;
-
-    public float dashForce = 20f;
-    public float dashDuration = 0.2f;
-    public float dashCooldown = 1f;
-
-    private bool isDashing = false;
-    private bool canDash = true;
-    
 
 
     // Start is called before the first frame update
@@ -51,6 +38,7 @@ public class CharacterMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
+        animator = GetComponent<Animator>();
        
     }
 
@@ -157,7 +145,7 @@ public class CharacterMovement : MonoBehaviour
        
     
 
-    void OnTriggerCollision2D(Collider2D otherObject)
+    void OnTriggerEnter2D(Collider2D otherObject)
     {
         if (otherObject.gameObject.CompareTag("charge"))
         {
@@ -170,19 +158,12 @@ public class CharacterMovement : MonoBehaviour
 
     void fireShot()
     {
-        GameObject Fireball = (GameObject)Instantiate(FireballPrefab, firePoint.position, Quaternion.identity);
-
+        GameObject Fireball = Instantiate(FireballPrefab, firePoint.position, Quaternion.identity);
         Rigidbody2D rb = Fireball.GetComponent<Rigidbody2D>();
 
         float direction = isFacingRight ? 1f : -1f;
         rb.velocity = new Vector2(FireballSpeed * direction, 0);
 
-        if (!isFacingRight)
-        {
-            Vector3 scale = Fireball.transform.localScale;
-            scale.x *= -1;
-            Fireball.transform.localScale = scale;
-        }
     }
 
     void ShootFreezeBall()
@@ -216,9 +197,6 @@ public class CharacterMovement : MonoBehaviour
         {
             animator.SetTrigger("Die");
         }
-
-        
-        StartCoroutine(HandleDeath());
     }
 
     IEnumerator HandleDeath()
