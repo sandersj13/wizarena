@@ -31,6 +31,12 @@ public class CharacterMovement : MonoBehaviour
 
     private Animator animator;
 
+    private bool isDashing = false;
+    private bool canDash = true;
+    public float dashForce = 15f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 1f;
+
 
     // Start is called before the first frame update
     void Start()
