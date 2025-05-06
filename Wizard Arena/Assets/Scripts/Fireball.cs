@@ -21,18 +21,14 @@ public class Fireball : MonoBehaviour
 
      void OnTriggerEnter2D(Collider2D other)
      {
-        BlueSlime slime = other.GetComponent<BlueSlime>();
-        if (slime != null)
+         Enemy enemy = other.GetComponent<Enemy>();
+
+        if (enemy != null)
         {
-            slime.TakeDamage(damage);
+            enemy.TakeDamage(damage);
             Destroy(gameObject);
-        }
-
-
-        if (other.CompareTag("Enemy"))
-        {
-            Destroy(other.gameObject);
         }
         
      }
+    
 }

@@ -193,7 +193,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   FireballSpeed: 20
-  FireballPrefab: {fileID: 2157416160042022059, guid: 8517f57de6cdb4552924d94064b6c170, type: 3}
+  FireballPrefab: {fileID: 8806522428458430551, guid: 8517f57de6cdb4552924d94064b6c170, type: 3}
   controller: {fileID: 0}
   firePoint: {fileID: 761875283620618173}
   Freezeballprefab: {fileID: 6361791615500023144, guid: a3147ac38d1304e38b327e55ebaa6d05, type: 3}
