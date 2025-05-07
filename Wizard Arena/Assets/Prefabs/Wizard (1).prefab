@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 2365955695540722377}
   - component: {fileID: 1043441385380935438}
   - component: {fileID: 8418891650106122104}
+  - component: {fileID: 2733805241393289731}
   m_Layer: 0
   m_Name: Wizard (1)
   m_TagString: Player
@@ -271,10 +272,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7203dcfd4dd214aac93554ce6b359824, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.4
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -284,7 +285,7 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
+  BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
@@ -356,6 +357,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2733805241393289731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5284683937226536121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25c96bfe031e43cc86d553cc03c4e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 7
+  jumpSound: {fileID: 8300000, guid: 7203dcfd4dd214aac93554ce6b359824, type: 3}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0.1
 --- !u!1 &5501529369173513716
 GameObject:
   m_ObjectHideFlags: 0
