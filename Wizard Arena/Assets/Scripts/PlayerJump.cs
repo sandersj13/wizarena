@@ -10,7 +10,7 @@ public class PlayerJump : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.1f;
 
-    private Rigidbody rb;
+    private Rigidbody2D rb;
     private AudioSource audioSource;
     private bool isGrounded;
 
@@ -18,7 +18,7 @@ public class PlayerJump : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -37,7 +37,24 @@ public class PlayerJump : MonoBehaviour
     void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        audioSource.PlayOneShot(jumpSound);
-        
+        if (jumpSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(jumpSound);
+        }
+        else
+        {
+            Debug.LogWarning("Jump sound or AudioSource missing.");
+        }
+    }
+
+
+    void OnDrawGizmosSelected()
+    {
+
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
     }
 }
