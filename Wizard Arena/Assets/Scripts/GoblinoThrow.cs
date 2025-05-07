@@ -12,6 +12,8 @@ public class GoblinoThrow : MonoBehaviour
 
     private float throwTimer = 0f;
 
+  
+
 
     // Update is called once per frame
     void Update()
