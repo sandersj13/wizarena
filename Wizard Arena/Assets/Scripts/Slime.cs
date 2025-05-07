@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlueSlime : MonoBehaviour
+public class Slime : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public float jumpForce = 7f;

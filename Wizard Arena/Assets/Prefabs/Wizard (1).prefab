@@ -193,13 +193,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   FireballSpeed: 20
-  FireballPrefab: {fileID: 2157416160042022059, guid: 8517f57de6cdb4552924d94064b6c170, type: 3}
+  FireballPrefab: {fileID: 8806522428458430551, guid: 8517f57de6cdb4552924d94064b6c170, type: 3}
   controller: {fileID: 0}
   firePoint: {fileID: 761875283620618173}
   Freezeballprefab: {fileID: 6361791615500023144, guid: a3147ac38d1304e38b327e55ebaa6d05, type: 3}
   maxHealth: 50
   health: 0
-  deathEffect: {fileID: 0}
+  gameOver: 0
+  dashForce: 15
+  dashDuration: 0.2
+  dashCooldown: 1
 --- !u!61 &2365955695540722377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -267,11 +270,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 390cef223be7340b2956c0898206e106, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7203dcfd4dd214aac93554ce6b359824, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

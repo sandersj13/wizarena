@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1018373446980475815}
   - component: {fileID: 7324823618385977014}
   - component: {fileID: -2797469853030058219}
-  - component: {fileID: -3131000304749403155}
+  - component: {fileID: -599778318101384636}
   m_Layer: 0
   m_Name: Target Dummy
   m_TagString: Enemy
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
   damage: 2
---- !u!114 &-3131000304749403155
+--- !u!114 &-599778318101384636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4367878755219271028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49d6d461da7d9418b9fa535c13ab0599, type: 3}
+  m_Script: {fileID: 11500000, guid: b87358414835241b8bf1fb15c9cf3d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  health: 2
