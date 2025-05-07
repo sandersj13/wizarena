@@ -28,10 +28,11 @@ public class animationController : MonoBehaviour
             animController.SetInteger("Reg", 2);
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             animController.SetInteger("Reg", 3);
         }
 
+        int currentState = animController.GetInteger("Reg");
     }
 }
