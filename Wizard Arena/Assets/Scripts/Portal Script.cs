@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PortalTeleport : MonoBehaviour
 {
+    public string playerTag = "Player";
+    public GameManager gameManager;
  
 
     void OnTriggerEnter2D(Collider2D hit)
     {
 
-        if(hit.gameObject.tag == "Portal")
+        if(hit.CompareTag("Player") && gameManager.AllEnemiesDefeated())
         {
             int CSnum = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(CSnum + 1);
@@ -25,7 +27,7 @@ public class PortalTeleport : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
