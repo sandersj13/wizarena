@@ -25,6 +25,12 @@ public class PlayerJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(groundCheck == null)
+        {
+            Debug.LogError("GroundCheck is not assigned in the Inspectr!");
+            return;
+        }
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         if (Input.GetButtonDown("Jump") && isGrounded)

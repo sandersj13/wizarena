@@ -502,8 +502,8 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: 7203dcfd4dd214aac93554ce6b359824, type: 3}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  groundCheck: {fileID: 0}
+    m_Bits: 8
+  groundCheck: {fileID: 5520895976693339721}
   groundCheckRadius: 0.1
 --- !u!1 &5501529369173513716
 GameObject:
