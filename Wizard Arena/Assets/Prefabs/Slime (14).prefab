@@ -12,15 +12,11 @@ GameObject:
   - component: {fileID: 7460083238829249543}
   - component: {fileID: 3173963157938638908}
   - component: {fileID: 2598896990320175330}
-  - component: {fileID: 386529873654856322}
   - component: {fileID: 5146183008096531882}
-  - component: {fileID: -6456702716215816356}
-  - component: {fileID: 313488144544228842}
   - component: {fileID: -5330818903588453631}
-  - component: {fileID: -1011133802763876126}
   - component: {fileID: 8135766572177402192}
   m_Layer: 0
-  m_Name: Slime (4)
+  m_Name: Slime (14)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4045709081174260749}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.37, y: -0.56, z: 0}
+  m_LocalPosition: {x: -11.502725, y: -0.48409367, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -142,29 +138,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &386529873654856322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4045709081174260749}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db24844f7d824882821ad945c316c4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 55
-  attackRange: 2
-  attackCooldown: 2
-  damage: 10
-  groundCheck: {fileID: 5520895976693339721, guid: d65e5bcb4ecec42458dffcb3736cccec, type: 3}
-  groundCheckRadius: 0.1
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  maxHealth: 3
 --- !u!61 &5146183008096531882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -210,33 +183,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1488953, y: 1.0313845}
   m_EdgeRadius: 0
---- !u!114 &-6456702716215816356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4045709081174260749}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57e61f7a0ed3245ecac91067fd71120f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0
---- !u!114 &313488144544228842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4045709081174260749}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b83acf1a527794d6fbdf1a26118915ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
-  damage: 2
 --- !u!82 &-5330818903588453631
 AudioSource:
   m_ObjectHideFlags: 0
@@ -333,19 +279,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-1011133802763876126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4045709081174260749}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b87358414835241b8bf1fb15c9cf3d76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
 --- !u!114 &8135766572177402192
 MonoBehaviour:
   m_ObjectHideFlags: 0
