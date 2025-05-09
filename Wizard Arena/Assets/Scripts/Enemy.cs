@@ -35,4 +35,5 @@ public class Enemy : MonoBehaviour
         gameManager.EnemyDefeated();
         Destroy(gameObject);
     }
+
 }
