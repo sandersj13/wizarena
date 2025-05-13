@@ -6,10 +6,12 @@ public class SlimeEnemy : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 3f;
-    public float jumpForce = 7f;
+    public float jumpForce = 10f;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
+    
+    
 
     [Header("Combat")]
     public float attackRange = 1.5f;
@@ -45,6 +47,9 @@ public class SlimeEnemy : MonoBehaviour
         if (isFrozen || player == null) return;
 
         bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        
+       
+
         float distance = Vector2.Distance(transform.position, player.position);
 
         if (distance <= attackRange)
@@ -60,11 +65,18 @@ public class SlimeEnemy : MonoBehaviour
                 Jump();
             }
         }
+       
     }
 
     void MoveTowardPlayer()
     {
         Vector2 direction = (player.position - transform.position).normalized;
+        direction.y = 0;
+        if (direction.x < 0)
+            spriteRenderer.flipX = true;
+        else if (direction.x > 0)
+            spriteRenderer.flipX = false;
+
         transform.position += (Vector3)(direction * moveSpeed * Time.deltaTime);
     }
 
@@ -81,6 +93,8 @@ public class SlimeEnemy : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
+
+    
 
     void OnCollisionEnter2D(Collision2D collision)
     {
