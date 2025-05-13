@@ -13,9 +13,9 @@ public class Slime : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
-    public int maxHealth = 15;
-    private int currentHealth;
 
+    public int maxHealth = 3;
+    private int currentHealth;
 
 
 
@@ -96,12 +96,12 @@ public class Slime : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
-
         if (currentHealth <= 0)
         {
             Die();
         }
-    }
+    }    
+   
 
     void Die()
     {

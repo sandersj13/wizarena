@@ -11,9 +11,7 @@ TagManager:
   - Slime
   - Enemy
   - Jump
-  - Specter
   - Projectile
-  - Ground
   layers:
   - Default
   - TransparentFX
