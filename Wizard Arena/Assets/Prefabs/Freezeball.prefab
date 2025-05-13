@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3647698232530182451}
   m_Layer: 0
   m_Name: Freezeball
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,8 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c7422a14d7b4882a914537b446697b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeDuration: 3
-  speed: 10
   damage: 10
 --- !u!61 &-2765034859743011928
 BoxCollider2D:
