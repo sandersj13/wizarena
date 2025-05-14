@@ -39,6 +39,11 @@ public class CharacterMovement : MonoBehaviour
     public float dashCooldown = 1f;
 
 
+    public GameObject gameOverPanel;
+    public float delayBeforeShow = 2f;
+    private bool isDead = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -212,6 +217,7 @@ public class CharacterMovement : MonoBehaviour
             Die();
             gameOver = true;
         }
+        
     }
 
     void Die()
@@ -220,6 +226,10 @@ public class CharacterMovement : MonoBehaviour
         {
             animator.SetTrigger("Die");
         }
+        if (isDead) return;
+        isDead = true;
+        Debug.Log("Player Died");
+        Invoke("ShowGameOver", delayBeforeShow);
     }
 
     void FixedUpdate()
@@ -228,6 +238,11 @@ public class CharacterMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         }
+    }
+
+    void ShowGameOver()
+    {
+        gameOverPanel.SetActive(true);
     }
     
 }
