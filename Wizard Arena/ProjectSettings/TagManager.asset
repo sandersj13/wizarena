@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Jump
   - Projectile
+  - Zombie
   layers:
   - Default
   - TransparentFX

@@ -6408,6 +6408,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 993759750840118452, guid: 7e9f70a65e15b4ccaba21e84954bd4ae, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4364678611466515096, guid: 7e9f70a65e15b4ccaba21e84954bd4ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.913376

@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af3ba48d5f91a42ef87539e4d8945de7
-      internalID: -1268812279
+      spriteID: bb219d37f57b340e59b5356c951f5269
+      internalID: 210836200
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bede17674a5641fd99429d951718bc9
-      internalID: 775093709
+      spriteID: ca412c11b1ca24e02acb0c01e65c200e
+      internalID: 1531563883
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eef8e7b0b0e0b424e8d587ae1dadcb8e
-      internalID: -1911798438
+      spriteID: a6fe185b949c84f20ba075e705b31924
+      internalID: 1039581507
       vertices: []
       indices: 
       edges: []
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 215e8cb144b564bb4994a10233b38980
-      internalID: -685291415
+      spriteID: e786a516d30bf4d9ca4f6fd0e44b8fd6
+      internalID: 127834585
       vertices: []
       indices: 
       edges: []
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaa8080c27d6a49449fed547cf9b5d72
-      internalID: -2141885124
+      spriteID: b8af7c432566542cdbedfd9219a4783d
+      internalID: -1647719515
       vertices: []
       indices: 
       edges: []
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1f049d169d0e4c4bbbce153c0272190
-      internalID: 2012048015
+      spriteID: 22651fbae2253409abed5f21cb0a7f6e
+      internalID: 1928249242
       vertices: []
       indices: 
       edges: []
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f186a725cb9543fbad955542c02c627
-      internalID: -1221885556
+      spriteID: b1d924b3d0dba4ceebbe92a1039dc458
+      internalID: -533041356
       vertices: []
       indices: 
       edges: []
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbc9270cbb1154350b532a57381e67e7
-      internalID: 1690267255
+      spriteID: d709e5a51196e4352bd5aecacb2c5df0
+      internalID: -98130066
       vertices: []
       indices: 
       edges: []
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93a9425eeb9024ea9951d02e9e0456dc
-      internalID: -1569223513
+      spriteID: 71fac0f33aaa24c859b75dd6031d5676
+      internalID: 1665748585
       vertices: []
       indices: 
       edges: []
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37971315be1634ff0ad43d61a436c60e
-      internalID: -1892654218
+      spriteID: 2699fb25708414fcd87d640014b0beb6
+      internalID: 802548869
       vertices: []
       indices: 
       edges: []
@@ -317,16 +317,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boss teleport enter_0: -1268812279
-      boss teleport enter_1: 775093709
-      boss teleport enter_2: -1911798438
-      boss teleport enter_3: -685291415
-      boss teleport enter_4: -2141885124
-      boss teleport enter_5: 2012048015
-      boss teleport enter_6: -1221885556
-      boss teleport enter_7: 1690267255
-      boss teleport enter_8: -1569223513
-      boss teleport enter_9: -1892654218
+      boss teleport enter_0: 210836200
+      boss teleport enter_1: 1531563883
+      boss teleport enter_2: 1039581507
+      boss teleport enter_3: 127834585
+      boss teleport enter_4: -1647719515
+      boss teleport enter_5: 1928249242
+      boss teleport enter_6: -533041356
+      boss teleport enter_7: -98130066
+      boss teleport enter_8: 1665748585
+      boss teleport enter_9: 802548869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
