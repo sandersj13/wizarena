@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: -3626061025108512792}
   - component: {fileID: 2390116772527590545}
   - component: {fileID: -7320904015985985817}
+  - component: {fileID: 6062132354276289170}
   m_Layer: 0
-  m_Name: goblino_0
+  m_Name: goblino_0 (5)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 3203741009738397545}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -5.75, z: 0}
+  m_LocalPosition: {x: -41.72, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -213,6 +214,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+--- !u!114 &6062132354276289170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3203741009738397545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b6bb4b5549f74bb5ac85f2a0ce4c827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  jumpForce: 10
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 1.5
+  attackCooldown: 2
+  damage: 10
+  maxHealth: 3
 --- !u!1 &6720195710891697862
 GameObject:
   m_ObjectHideFlags: 0
